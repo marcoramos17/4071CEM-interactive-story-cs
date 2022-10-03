@@ -61,5 +61,10 @@ You won’t have time to hit both, though, you’ll have heat on you as soon as 
 I nod, “That sounds more like my thing.” 
 “Good. So what will it be: a scrap heist or a medicine raid? pick” 
 
+<<<<<<< HEAD
 """
 print(intro)
+=======
+
+print(intro)
+>>>>>>> 0c3b79c17896e3d4063f982a39b0d28a9ab27440

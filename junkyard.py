@@ -59,12 +59,126 @@ tons of scrap and tech you can salvage and use as you please. Or, if you feel li
 corporate clinic not far away from there. Should have lots of food and medicine you can distribute to the folks at home.
 You won’t have time to hit both, though, you’ll have heat on you as soon as you’re done looting.” 
 I nod, “That sounds more like my thing.” 
-“Good. So what will it be: a scrap heist or a medicine raid? pick” 
-
-<<<<<<< HEAD
+“Good. So what will it be: a scrap heist or a medicine raid? You decide” 
 """
-print(intro)
-=======
 
-print(intro)
->>>>>>> 0c3b79c17896e3d4063f982a39b0d28a9ab27440
+scrap_heist = """
+I go back to the Junkyard and gather my crew. Tai is outside as our getaway as usual, while Anita and I sneak into the 
+building. Beth has been undercover for a week now in the Golems scraps factory. She had already knocked out her supervisors
+and taken out the power source before we came. We use her card to sneak into the building and begin taking as much scraps
+we could carry. This was around 2:00 am and we had to be as quiet as possible. One of the remote Golems security guards 
+ran on a separate power source to the building and we’re spotted red handed. Apparently, Beth wasn’t aware of this remote 
+Golem in the underground room. I quickly drop all the scraps I was holding and start running to Tai, we had to leave Akima 
+and Beth behind without ever knowing what happened to them. 
+GAME OVER (two members of your crew aren’t present)"""
+
+medicine_raid = """
+Kane told us about this chemist store we could go to, apparently the owner is a partner of ours and would be willing to 
+help us get some medicine we might need but we need to make it look like a robbery so he won’t be regarded as a suspect. 
+After arriving at the place, we talk with the owner and he lets us in. We proceed to take all the supplies we need and 
+then as we had planned, we try to make it look like a robbery. I kick some of the trash bins around and throw some of the 
+things in the counter on the floor while Tai beats the owner to remove any suspicions from him. As we were about to leave 
+the store, we find ourselves surrounded by police Golems, it seems our friend chemist was not so friendly after all and 
+he had betrayed us. Our car was just behind them so we ran towards the car kicking the Golems between us and our only 
+escape."""
+
+method_of_escape = """
+We have managed to secure a good amount of scraps which we can use to improve our conditions at the Junkyard but right 
+now we are being followed by a bunch of angry Golems and our car decides to break down in the middle of the runaway. 
+Amidst the chaos Tai tells us to calm down and buy him some time as he will patch up the vehicle. Akima on the other hand 
+says we should be more realistic and just run away, leaving the scraps behind as our safety should be our main concern. 
+I must decide quick."""
+
+fixing_of_car = """We decided to give Tai some time to fix the vehicle, we fought against the Golems for a while and as 
+things were getting difficult to handle, Tai finished his repairs and we got away. As we finally arrive at the Junkyard 
+I am faced with a tough decision. The Junkyard harbours countless people who, just like me, have nowhere else to go and 
+no way of surviving on their own, there are a lot of things that this place needs, we are constantly hiding from the 
+government but who’s to say that we won’t have to fight for our lives one day? What if someone finds us and we are forced 
+into a war or worse, a massacre. On the other hand, the people here are starving, with no jobs and no way to sustain 
+ourselves we have been forced to steal, kill and whatever else was necessary to go on living. Hence my question, should 
+I use the scraps to reinforce our security and defences, or should I sell these to buy more food and resources for our 
+people?"""
+
+running_away = """We decided to run away, fixing the vehicle so quickly seems impossible even for Tai and we can’t hold 
+that long against those Golems. We left our scraps behind and ran. However, we didn’t go far, on foot we had no way to 
+outrun those Golems and we got captured. This is how our journey ends."""
+
+uses_scrap = """I have decided to use the scraps to make improvements around here. We do need food and other resources, 
+but I believe with the scraps we have here I could do the improvements in security we need and still have enough spares 
+to make some improvements to our food storage, we still have enough resources for now and we can always find a newer source
+for those things, meanwhile the defences are something that once upgraded should last for a long time. 
+I could be making a huge mistake, but I have decided that worrying about it will only make things worse, everyone in the 
+group also agreed so, with the help of Tai, I began making the improvements to our defences and then Akima helped to 
+improve our systems security and make it more efficient at detecting threats by using technologies such as artificial 
+intelligence and facial recognition, we could detect anyone suspicious. It took a little longer than I expected but we 
+managed to finish all the upgrades required so everyone at the Junkyard should be safe for a while now, but our job was 
+far from over. We still needed resources to keep everyone alive and well fed, it was time to get access to a steady source 
+of income and this is how we forged our plan to kidnap a VIP. Our decision to kidnap a VIP was not an easy one, it would
+require us to put ourselves in a lot of risk and we just barely got away from a tricky situation. Regardless, it was a 
+job that needed to be done and this was our best option. 
+Identifying a target was not an easy task but, with Beth's to help us, we managed to find a governor who is the perfect 
+fit to be our target. She infiltrated some important buildings and used her charismatic abilities to get information about 
+many of the VIPs, things like their income, their popularity and importance to the government. With this information we 
+selected the most disposable governor we could find, someone with a high income but not too many will care if they 
+disappear and this is where Akima comes into play, with her extensive knowledge of ethical hacking, she got into the systems 
+of the government and managed to get the schedules at which everyone in the main building goes home, she gathered access 
+to the door lock systems and managed to lock our target inside the building with only one exit available in the back. 
+This was how we split our target from everyone else in the building. Tai drove us behind the building, and I grabbed our 
+target and pulled him inside the vehicle. With access to his personal documents, and by threatening him, we managed to 
+get ourselves a stable source of income which led the Junkyard to have enough resources for every man woman and child to 
+arm themselves in preparation for war.
+
+We’ve got his money, we’ve got his connections, we’ve got his technology, we don’t need him anymore. Beth suggests we 
+spare his life that he isn’t useful, Anita says we should kill him that he would be able to ID us and let the corporate 
+know about our plans.
+"""
+
+sells_scraps = """We decided to sell the scraps and buy more resources, this should keep us fed for a while. We managed 
+to survive that crazy escape and now everyone can eat and drink as much as they want to for a while. Our peace didn’t last 
+for long though, without proper security systems in place we were unable to detect a “rat” that infiltrated our precious 
+home. Soon, our Junkyard was flooded by the police and other special units, with nowhere to run or hide and no defences 
+set we had to give in and were captured by the government."""
+
+spare_Oswald = """Tai was insisting to be the one to take him to a particular cell he knew. It was a secret bunker he had
+used previously to hideout from the corporate during the early years of their control. On their way their Tai reminded 
+Oswald of a woman who previously worked for him as a servant her name was Kimberly and at that moment Oswald turned pale. 
+Tai forces him to confess to what he did to her. He confesses that he had her killed after she overheard a conversation 
+between Mr Oswald and the current president when they were discussing how to assassinate a certain politician that was 
+encouraging the junkyard civilians. Unfortunately for Oswald Kimberly was Tai’s daughter and he had spent years trying 
+to find the truth about what happened to her since her disappearance. Immediately after Tai hears this, he shoots Oswald 
+in the head and leaves his body in a side walk.
+A few hours later when the police were doing their daily patrol they stumbled across his body and secretly started 
+investigating his death, because they knew whoever was responsible for his death must have gotten help from an important 
+person in the corporate. They then check their records to find out that some parts of the funding given to the police 
+department were taking out, and the only person with to that access was Kane. She was questioned and even tortured for 
+weeks till she finally caved in and told them everything. They kill her and prepare their troops to wipe out the entirety 
+of the Junkyard. 
+
+The news of Kane’s death reaches Elon and his crew and now they know for sure that a war is coming they immediately start 
+rounding up their troops and using the resources they took from Oswald and build weapons and armour to defend themselves. 
+Every night the men and women slept with their guns and weapons in their hand and were always agitated since they had no 
+one on the outside anymore that could tell them exactly when the corporate would attack. 
+Three days after Kane’s death, the corporate raids the Junkyard with a Tsar bomb and completely wipes them out with it. 
+
+GAME OVER
+"""
+
+kill_Oswald = """
+We keep him tied up and throw him into the sewers, that way no one would be able to find him. Anita then edited his records 
+to make it look like he had made plans to travel out of the country. 
+They get back to the junkyard and begin planning their attack, the aim was to make a meticulous plan to that would catch 
+the corporate by surprise and take over their government. There are two chances we have to make our move to hit them hard.
+In about ten weeks the corporate were having a huge annual feast to celebrate the anniversary of the creation of the first
+Golem. Now the issue with this festival is that there would be plenty of security all over the feast to cover ground in 
+case they get compromised it will also be a slow battle that would definitely cause a lot of causalities and a lot of chaos. 
+However, ten weeks is enough time for the junkyard to make thorough preparations on exactly how to plan the attack and 
+it gives us enough time to train our troops properly. The security would also become complacent from all the alcohol and 
+partying.
+Our other option would have to take place next week. Kane gave us some information about a secret meeting that was about 
+to happen among the most elite people in the corporate.  The most important advantage we would have with this mission is 
+that there would be less security since not many people know about the meeting and we would easily outnumber them. 
+However, we can only attack from one part of the building and they would have the building itself to take cover from while 
+we would be out in the open. Our troops would also not be fully prepared for the battle as there is less prep time. The 
+security would also be very vigilant because of the importance of the meeting
+"""
+

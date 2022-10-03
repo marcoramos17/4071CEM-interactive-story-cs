@@ -59,7 +59,7 @@ tons of scrap and tech you can salvage and use as you please. Or, if you feel li
 corporate clinic not far away from there. Should have lots of food and medicine you can distribute to the folks at home.
 You won’t have time to hit both, though, you’ll have heat on you as soon as you’re done looting.” 
 I nod, “That sounds more like my thing.” 
-“Good. So what will it be: a scrap heist or a medicine raid?” 
+“Good. So what will it be: a scrap heist or a medicine raid? pick” 
 
 """
 print(intro)

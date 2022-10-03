@@ -1,4 +1,5 @@
-intro = """POST-APOCALYPTIC JUNKYARD 
+## STORYLINE ##
+intro = """=======================POST-APOCALYPTIC JUNKYARD=======================
 What happens when you’re run out of your job for being inefficient, despite being the hardest working employee you know? 
 What happens when afterwards you go out to find another job, but suddenly everything seems so cut off? Every company that
 you email sends back an automated reply, your calls are answered by speech bots, and every job centre you know of is
@@ -70,7 +71,7 @@ we could carry. This was around 2:00 am and we had to be as quiet as possible. O
 ran on a separate power source to the building and we’re spotted red handed. Apparently, Beth wasn’t aware of this remote 
 Golem in the underground room. I quickly drop all the scraps I was holding and start running to Tai, we had to leave Akima 
 and Beth behind without ever knowing what happened to them. 
-GAME OVER (two members of your crew aren’t present)"""
+"""
 
 medicine_raid = """
 Kane told us about this chemist store we could go to, apparently the owner is a partner of ours and would be willing to 
@@ -80,16 +81,19 @@ then as we had planned, we try to make it look like a robbery. I kick some of th
 things in the counter on the floor while Tai beats the owner to remove any suspicions from him. As we were about to leave 
 the store, we find ourselves surrounded by police Golems, it seems our friend chemist was not so friendly after all and 
 he had betrayed us. Our car was just behind them so we ran towards the car kicking the Golems between us and our only 
-escape."""
+escape.
+"""
 
-method_of_escape = """
-We have managed to secure a good amount of scraps which we can use to improve our conditions at the Junkyard but right 
+method_escape = """
+We have managed to secure a good amount of supplies which we can use to improve our conditions at the Junkyard but right 
 now we are being followed by a bunch of angry Golems and our car decides to break down in the middle of the runaway. 
 Amidst the chaos Tai tells us to calm down and buy him some time as he will patch up the vehicle. Akima on the other hand 
-says we should be more realistic and just run away, leaving the scraps behind as our safety should be our main concern. 
-I must decide quick."""
+says we should be more realistic and just run away, leaving the supplies behind as our safety should be our main concern. 
+I must decide quick.
+"""
 
-fixing_of_car = """We decided to give Tai some time to fix the vehicle, we fought against the Golems for a while and as 
+fix_car = """
+We decided to give Tai some time to fix the vehicle, we fought against the Golems for a while and as 
 things were getting difficult to handle, Tai finished his repairs and we got away. As we finally arrive at the Junkyard 
 I am faced with a tough decision. The Junkyard harbours countless people who, just like me, have nowhere else to go and 
 no way of surviving on their own, there are a lot of things that this place needs, we are constantly hiding from the 
@@ -97,13 +101,17 @@ government but who’s to say that we won’t have to fight for our lives one da
 into a war or worse, a massacre. On the other hand, the people here are starving, with no jobs and no way to sustain 
 ourselves we have been forced to steal, kill and whatever else was necessary to go on living. Hence my question, should 
 I use the scraps to reinforce our security and defences, or should I sell these to buy more food and resources for our 
-people?"""
+people?
+"""
 
-running_away = """We decided to run away, fixing the vehicle so quickly seems impossible even for Tai and we can’t hold 
+run_away = """
+We decided to run away, fixing the vehicle so quickly seems impossible even for Tai and we can’t hold 
 that long against those Golems. We left our scraps behind and ran. However, we didn’t go far, on foot we had no way to 
-outrun those Golems and we got captured. This is how our journey ends."""
+outrun those Golems and we got captured. This is how our journey ends.
+"""
 
-uses_scrap = """I have decided to use the scraps to make improvements around here. We do need food and other resources, 
+use_scraps = """
+I have decided to use the scraps to make improvements around here. We do need food and other resources, 
 but I believe with the scraps we have here I could do the improvements in security we need and still have enough spares 
 to make some improvements to our food storage, we still have enough resources for now and we can always find a newer source
 for those things, meanwhile the defences are something that once upgraded should last for a long time. 
@@ -133,11 +141,13 @@ spare his life that he isn’t useful, Anita says we should kill him that he wou
 know about our plans.
 """
 
-sells_scraps = """We decided to sell the scraps and buy more resources, this should keep us fed for a while. We managed 
+sell_scraps = """
+We decided to sell the scraps and buy more resources, this should keep us fed for a while. We managed 
 to survive that crazy escape and now everyone can eat and drink as much as they want to for a while. Our peace didn’t last 
 for long though, without proper security systems in place we were unable to detect a “rat” that infiltrated our precious 
 home. Soon, our Junkyard was flooded by the police and other special units, with nowhere to run or hide and no defences 
-set we had to give in and were captured by the government."""
+set we had to give in and were captured by the government.
+"""
 
 spare_Oswald = """Tai was insisting to be the one to take him to a particular cell he knew. It was a secret bunker he had
 used previously to hideout from the corporate during the early years of their control. On their way their Tai reminded 
@@ -159,8 +169,6 @@ rounding up their troops and using the resources they took from Oswald and build
 Every night the men and women slept with their guns and weapons in their hand and were always agitated since they had no 
 one on the outside anymore that could tell them exactly when the corporate would attack. 
 Three days after Kane’s death, the corporate raids the Junkyard with a Tsar bomb and completely wipes them out with it. 
-
-GAME OVER
 """
 
 kill_Oswald = """
@@ -182,3 +190,127 @@ we would be out in the open. Our troops would also not be fully prepared for the
 security would also be very vigilant because of the importance of the meeting
 """
 
+
+upperStart = None
+choice = 0
+
+#CHOICES SELECTION
+def makeChoice(choiceID, option):
+    correct = [False,True, True, False]
+    if option == "1":
+        chosen = [scrap_heist, fix_car, use_scraps, spare_Oswald]
+        return chosen[choiceID], correct[choiceID]
+    elif option == "2":
+        chosen = [medicine_raid, run_away, sell_scraps, kill_Oswald]
+        return chosen[choiceID], not correct[choiceID]
+    else:
+        err = "This is not an option. Please type either 1 or 2 to make a choice"
+        choiceID = choiceInput(choiceID)
+        return err        
+
+def choiceInput(choiceID):
+    if choiceID == 0:
+        #First Choice
+        choice = input(""" CHOOSE YOUR OPTION
+        =======================
+        1. Scrap Heist 
+        =======================
+        2. Medicine Raid
+        =======================\n""")
+        firstChoice = makeChoice(choiceID, choice)
+        print(firstChoice[0])
+        if not firstChoice[1]:
+            gameOver("None")
+        choiceID = choiceID + 1
+        return choiceID
+
+    elif choiceID == 1:
+        #Second Choice
+            choice = input(""" CHOOSE YOUR OPTION
+            =======================
+            1. Fix the Car 
+            =======================
+            2. Run Away
+            =======================\n""")
+            firstChoice = makeChoice(choiceID, choice)
+            print(firstChoice[0])
+            if not firstChoice[1]:
+                gameOver("None")
+            choiceID = choiceID + 1
+            return choiceID
+        
+    
+    elif choiceID == 2:
+        #Third Choice
+        choice = input(""" CHOOSE YOUR OPTION
+        =======================
+        1. Use Scraps 
+        =======================
+        2. Sell Scraps
+        =======================\n""")
+        firstChoice = makeChoice(choiceID, choice)
+        print(firstChoice[0])
+        if not firstChoice[1]:
+            gameOver("None")
+        choiceID = choiceID + 1
+        return choiceID
+
+    elif choiceID == 3:
+        #Fourth Choice
+        choice = input(""" CHOOSE YOUR OPTION
+        =======================
+        1. Spare Oswald 
+        =======================
+        2. Kill Oswald
+        =======================\n""")
+        firstChoice = makeChoice(choiceID, choice)
+        print(firstChoice[0])
+        if not firstChoice[1]:
+            gameOver("None")
+        choiceID = choiceID + 1
+        return choiceID
+    else:
+        err = "Choice ID is invalid."
+        return err
+
+# STORY ORDER WITH CHOICES
+def runStory(choice):
+    
+    #Story Part 0
+    print(intro)
+
+    choice = choiceInput(choice)
+
+    #Story Part 1
+    print(method_escape)
+
+    choice = choiceInput(choice)
+    choice = choiceInput(choice)
+    choice = choiceInput(choice)
+    choice = choiceInput(choice)
+
+    print("\n<<======================= CONGRATULATIONS! YOU WON THE GAME! =======================>>")
+
+
+def startRun():
+    print("\n||=========================== THE JUNKYARD ===========================||")
+    start = input("||======================= Type START to begin: =======================||\n")
+    return start.upper()
+
+def restartRun():
+    restart = input("\nSorry, seems like you lost. Try again by writing 'RESTART' \n")
+    return restart.upper()
+
+def loadGame(upperStart, restart):
+    if not restart:
+        while upperStart != "START":
+            upperStart = startRun()
+    game = runStory(choice)
+
+def gameOver(upperRestart):
+    print("GAME OVER")
+    while upperRestart != "RESTART":
+        upperRestart = restartRun()
+    loadGame(upperStart, True)
+
+loadGame(upperStart, False)

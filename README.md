@@ -1,2 +1,6 @@
-# interactive-story-cs
-Coventry University - Computer Science 2022/23 - Interactive Story Project
+4071 - Activity Led CS Project 
+===============
+Coventry University - CS Software Engineering Project
+
+# Group Project
+Development of a python application. The application consists of an interactive story.
